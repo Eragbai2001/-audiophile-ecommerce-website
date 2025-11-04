@@ -1,0 +1,45 @@
+/* eslint-disable */
+/**
+ * Generated `api` utility.
+ *
+ * THIS CODE IS AUTOMATICALLY GENERATED.
+ *
+ * To regenerate, run `npx convex dev`.
+ * @module
+ */
+
+import type * as emails_OrderConfirmation from "../emails/OrderConfirmation.js";
+import type * as emails from "../emails.js";
+import type * as orders from "../orders.js";
+
+import type {
+  ApiFromModules,
+  FilterApi,
+  FunctionReference,
+} from "convex/server";
+
+/**
+ * A utility for referencing Convex functions in your app's API.
+ *
+ * Usage:
+ * ```js
+ * const myFunctionReference = api.myModule.myFunction;
+ * ```
+ */
+declare const fullApi: ApiFromModules<{
+  "emails/OrderConfirmation": typeof emails_OrderConfirmation;
+  emails: typeof emails;
+  orders: typeof orders;
+}>;
+declare const fullApiWithMounts: typeof fullApi;
+
+export declare const api: FilterApi<
+  typeof fullApiWithMounts,
+  FunctionReference<any, "public">
+>;
+export declare const internal: FilterApi<
+  typeof fullApiWithMounts,
+  FunctionReference<any, "internal">
+>;
+
+export declare const components: {};

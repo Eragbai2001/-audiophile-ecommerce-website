@@ -1,0 +1,254 @@
+{
+  "products": [
+    {
+      "id": "xx99-mark-ii",
+      "category": "headphones",
+      "name": "XX99 MARK II",
+      "fullName": "XX99 MARK II HEADPHONES",
+      "isNew": true,
+      "price": 2999,
+      "description": "The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound",
+      "shortDescription": "The new XX99 Mark II headphones is the pinnacle of pristine audio.",
+      "imageSrc": "/Preview1 (3).png",
+      "imageAlt": "XX99 Mark II Headphones",
+      "layoutVariant": "left",
+      "showcaseImages": [
+        { "imageSrc": "/Preview1 (3).png", "layoutVariant": "left" },
+        { "imageSrc": "/Preview2.png", "layoutVariant": "right" },
+        { "imageSrc": "/Preview3.png", "layoutVariant": "left" }
+      ],
+      "features": [
+        {
+          "text": "Featuring a genuine leather head strap and premium earpieces, these headphones deliver superior comfort for any situation. Whether you're taking a business call or just in your own personal space, the auto mute and pause features ensure that you never miss a beat."
+        },
+        {
+          "text": "The advanced Active Noise Cancellation with built-in equalizer allow you to experience your audio world on your terms. It lets you enjoy your audio in peace, but quickly interact with your surroundings when you need to. Combined with Bluetooth 5. 0 connectivity and 40 hours of battery life, the XX99 Mark II headphones gives you superior sound, cutting-edge technology, and premium design aesthetic."
+        }
+      ],
+      "inTheBox": [
+        { "quantity": 1, "item": "Headphone Unit" },
+        { "quantity": 2, "item": "Replacement Earpiece" },
+        { "quantity": 1, "item": "User Manual" },
+        { "quantity": 1, "item": "3.5mm 5m Audio Cable" },
+        { "quantity": 1, "item": "Travel Bag" }
+      ],
+      "gallery": [
+        { "imageSrc": "/Bitmap (5).png", "imageAlt": "XX99 Mark II view 1" },
+        { "imageSrc": "/Bitmap (6).png", "imageAlt": "XX99 Mark II view 2" },
+        { "imageSrc": "/Bitmap (7).png", "imageAlt": "XX99 Mark II view 3" }
+      ],
+      "relatedProducts": ["xx99-mark-i", "xx59", "zx9"]
+    },
+    {
+      "id": "xx99-mark-i",
+      "category": "headphones",
+      "name": "XX99 MARK I",
+      "fullName": "XX99 MARK I HEADPHONES",
+      "isNew": false,
+      "price": 1899,
+      "description": "As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.",
+      "shortDescription": "As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction.",
+      "imageSrc": "/Preview2.png",
+      "imageAlt": "XX99 Mark I Headphones",
+      "layoutVariant": "right",
+      "showcaseImages": [
+        { "imageSrc": "/Preview2.png", "layoutVariant": "left" },
+        { "imageSrc": "/Preview3.png", "layoutVariant": "right" },
+        { "imageSrc": "/Preview1 (3).png", "layoutVariant": "left" }
+      ],
+      "features": [
+        {
+          "text": "As the headphones all others are measured against, the XX99 Mark I demonstrates over five decades of audio expertise, redefining the critical listening experience. This pair of closed-back headphones are made of industrial, aerospace-grade materials to emphasize durability at a relatively light weight of 11 oz."
+        },
+        {
+          "text": "From the handcrafted microfiber ear cushions to the robust metal headband with inner damping element, the components work together to deliver comfort and uncompromising sound. Its closed-back design delivers up to 27 dB of passive noise cancellation, reducing resonance by reflecting sound to a dedicated absorber. For connectivity, a specially tuned cable is included with a balanced gold connector."
+        }
+      ],
+      "inTheBox": [
+        { "quantity": 1, "item": "Headphone Unit" },
+        { "quantity": 2, "item": "Replacement Earpiece" },
+        { "quantity": 1, "item": "User Manual" },
+        { "quantity": 1, "item": "3.5mm 5m Audio Cable" },
+        { "quantity": 1, "item": "Travel Bag" }
+      ],
+      "gallery": [
+        { "imageSrc": "/Bitmap (5).png", "imageAlt": "XX99 Mark I view 1" },
+        { "imageSrc": "/Bitmap (6).png", "imageAlt": "XX99 Mark I view 2" },
+        { "imageSrc": "/Bitmap (7).png", "imageAlt": "XX99 Mark I view 3" }
+      ],
+      "relatedProducts": ["xx99-mark-ii", "xx59", "zx9"]
+    },
+    {
+      "id": "xx59",
+      "category": "headphones",
+      "name": "XX59",
+      "fullName": "XX59 HEADPHONES",
+      "isNew": false,
+      "price": 899,
+      "description": "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
+      "shortDescription": "Enjoy your audio almost anywhere with the XX59 headphones.",
+      "imageSrc": "/Preview3.png",
+      "imageAlt": "XX59 Headphones",
+      "layoutVariant": "left",
+      "showcaseImages": [
+        { "imageSrc": "/Preview3.png", "layoutVariant": "left" },
+        { "imageSrc": "/Preview1 (3).png", "layoutVariant": "right" },
+        { "imageSrc": "/Preview2.png", "layoutVariant": "left" }
+      ],
+      "features": [
+        {
+          "text": "These headphones have been created from durable, high-quality materials tough enough to take anywhere. Its compact folding design fuses comfort and minimalist style making it perfect for travel. Flawless transmission is assured by the latest wireless technology engineered for audio synchronization with videos."
+        },
+        {
+          "text": "More than a simple pair of headphones, this headset features a pair of built-in microphones for clear, hands-free calling when paired with a compatible smartphone. Controlling music and calls is also intuitive thanks to easy-access touch buttons on the earcups. Regardless of how you use the XX59 headphones, you can do so all day thanks to an impressive 30-hour battery life that can be rapidly recharged via USB-C."
+        }
+      ],
+      "inTheBox": [
+        { "quantity": 1, "item": "Headphone Unit" },
+        { "quantity": 2, "item": "Replacement Earpiece" },
+        { "quantity": 1, "item": "User Manual" },
+        { "quantity": 1, "item": "3.5mm 5m Audio Cable" },
+        { "quantity": 1, "item": "Travel Bag" }
+      ],
+      "gallery": [
+        { "imageSrc": "/Bitmap (8).png", "imageAlt": "XX59 view 1" },
+        { "imageSrc": "/Bitmap (9).png", "imageAlt": "XX59 view 2" },
+        { "imageSrc": "/Bitmap (10).png", "imageAlt": "XX59 view 3" }
+      ],
+      "relatedProducts": ["xx99-mark-ii", "xx99-mark-i", "zx9"]
+    },
+    {
+      "id": "zx9",
+      "category": "speakers",
+      "name": "ZX9",
+      "fullName": "ZX9 SPEAKER",
+      "isNew": true,
+      "price": 4500,
+      "description": "Upgrade your sound system with the all new ZX9 active speaker. It's a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
+      "shortDescription": "Upgrade your sound system with the all new ZX9 active speaker.",
+      "imageSrc": "/speaker/image-removebg-preview(38) (2).png",
+      "imageAlt": "ZX9 Speaker",
+      "layoutVariant": "left",
+      "showcaseImages": [
+        { "imageSrc": "/speaker/image-removebg-preview(38) (2).png", "layoutVariant": "left" },
+        { "imageSrc": "/speaker/image-removebg-preview(38) (2).png", "layoutVariant": "right" }
+      ],
+      "features": [
+        {
+          "text": "Connect via Bluetooth or nearly any wired source. This speaker features optical, digital coaxial, USB Type-B, stereo RCA, and stereo XLR inputs, allowing you to have up to five wired source devices connected for easy switching. Improved bluetooth technology offers near lossless audio quality at up to 328ft (100m)."
+        },
+        {
+          "text": "Discover clear, more natural sounding highs than the competition with ZX9's signature planar diaphragm tweeter. Equally important is its powerful room-shaking bass courtesy of a 6.5\" aluminum alloy bass unit. You'll be able to enjoy equal sound quality whether in a large room or small den. Furthermore, you will experience new sensations from old songs since it can respond to even the subtle waveforms."
+        }
+      ],
+      "inTheBox": [
+        { "quantity": 1, "item": "Headphone Unit" },
+        { "quantity": 2, "item": "Replacement Earpiece" },
+        { "quantity": 1, "item": "User Manual" },
+        { "quantity": 1, "item": "3.5mm 5m Audio Cable" },
+        { "quantity": 1, "item": "Travel Bag" }
+      ],
+      "gallery": [
+        { "imageSrc": "/Bitmap (11).png", "imageAlt": "ZX9 Speaker view 1" },
+        { "imageSrc": "/Bitmap (12).png", "imageAlt": "ZX9 Speaker view 2" },
+        { "imageSrc": "/Bitmap (13).png", "imageAlt": "ZX9 Speaker view 3" }
+      ],
+      "relatedProducts": ["zx7", "xx99-mark-ii", "xx59"]
+    },
+    {
+      "id": "zx7",
+      "category": "speakers",
+      "name": "ZX7",
+      "fullName": "ZX7 SPEAKER",
+      "isNew": false,
+      "price": 3500,
+      "description": "Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
+      "shortDescription": "Stream high quality sound wirelessly with minimal loss.",
+      "imageSrc": "/speaker/image-removebg-preview(38) (2).png",
+      "imageAlt": "ZX7 Speaker",
+      "layoutVariant": "right",
+      "showcaseImages": [
+        { "imageSrc": "/speaker/image-removebg-preview(38) (2).png", "layoutVariant": "left" },
+        { "imageSrc": "/speaker/image-removebg-preview(38) (2).png", "layoutVariant": "right" }
+      ],
+      "features": [
+        {
+          "text": "Connect via Bluetooth or nearly any wired source. This speaker features optical, digital coaxial, USB Type-B, stereo RCA, and stereo XLR inputs, allowing you to have up to five wired source devices connected for easy switching. Improved bluetooth technology offers near lossless audio quality at up to 328ft (100m)."
+        },
+        {
+          "text": "Discover clear, more natural sounding highs than the competition with ZX9's signature planar diaphragm tweeter. Equally important is its powerful room-shaking bass courtesy of a 6.5\" aluminum alloy bass unit. You'll be able to enjoy equal sound quality whether in a large room or small den. Furthermore, you will experience new sensations from old songs since it can respond to even the subtle waveforms."
+        }
+      ],
+      "inTheBox": [
+        { "quantity": 1, "item": "Headphone Unit" },
+        { "quantity": 2, "item": "Replacement Earpiece" },
+        { "quantity": 1, "item": "User Manual" },
+        { "quantity": 1, "item": "3.5mm 5m Audio Cable" },
+        { "quantity": 1, "item": "Travel Bag" }
+      ],
+      "gallery": [
+        { "imageSrc": "/Bitmap (14).png", "imageAlt": "ZX7 Speaker view 1" },
+        { "imageSrc": "/Bitmap (15).png", "imageAlt": "ZX7 Speaker view 2" },
+        { "imageSrc": "/Bitmap (16).png", "imageAlt": "ZX7 Speaker view 3" }
+      ],
+      "relatedProducts": ["zx9", "xx99-mark-ii", "xx59"]
+    },
+    {
+      "id": "yx1",
+      "category": "earphones",
+      "name": "YX1",
+      "fullName": "YX1 WIRELESS EARPHONES",
+      "isNew": true,
+      "price": 599,
+      "description": "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
+      "shortDescription": "Tailor your listening experience with premium wireless earphones.",
+      "imageSrc": "/earphone/Group 5 (1).png",
+      "imageAlt": "YX1 Wireless Earphones",
+      "layoutVariant": "left",
+      "showcaseImages": [
+        { "imageSrc": "/earphone/Group 5 (1).png", "layoutVariant": "left" }
+      ],
+      "features": [
+        {
+          "text": "Experience unrivalled stereo sound thanks to innovative acoustic technology. With improved ergonomics designed for full day wearing, these revolutionary earphones have been finely crafted to provide you with the perfect fit, delivering complete comfort all day long while enjoying exceptional noise isolation and truly immersive sound."
+        },
+        {
+          "text": "The YX1 Wireless Earphones features customizable controls for volume, music, calls, and voice assistants built into both earbuds. The new 7-hour battery life can be extended up to 28 hours with the charging case, giving you uninterrupted play time. Exquisite craftsmanship with a splash resistant design now available in an all new white and grey color scheme as well as the popular classic black."
+        }
+      ],
+      "inTheBox": [
+        { "quantity": 1, "item": "Headphone Unit" },
+        { "quantity": 2, "item": "Replacement Earpiece" },
+        { "quantity": 1, "item": "User Manual" },
+        { "quantity": 1, "item": "3.5mm 5m Audio Cable" },
+        { "quantity": 1, "item": "Travel Bag" }
+      ],
+      "gallery": [
+        { "imageSrc": "/Bitmap (17).png", "imageAlt": "YX1 Earphones view 1" },
+        { "imageSrc": "/Bitmap (18).png", "imageAlt": "YX1 Earphones view 2" },
+        { "imageSrc": "/Bitmap (19).png", "imageAlt": "YX1 Earphones view 3" }
+      ],
+      "relatedProducts": ["xx99-mark-ii", "zx9", "xx59"]
+    }
+  ],
+  "categories": [
+    {
+      "id": "headphones",
+      "name": "Headphones",
+      "image": "/headphones-category.png",
+      "link": "/headphones"
+    },
+    {
+      "id": "speakers",
+      "name": "Speakers",
+      "image": "/speakers-category.png",
+      "link": "/speakers"
+    },
+    {
+      "id": "earphones",
+      "name": "Earphones",
+      "image": "/earphones-category.png",
+      "link": "/earphones"
+    }
+  ]
+}
