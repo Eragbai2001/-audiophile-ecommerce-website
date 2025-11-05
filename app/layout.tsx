@@ -1,15 +1,8 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import { ConvexClientProvider } from "@/components/ConvexClientProvider";
 import { PageWrapper } from "@/components/page-wrapper";
-
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
 
 export const metadata: Metadata = {
   title: "Audiophile",
@@ -23,9 +16,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body
-        className={`${manrope.variable} antialiased font-manrope`}
-        style={{ fontFamily: "var(--font-manrope)" }}>
+        className="antialiased"
+        style={{ fontFamily: "'Manrope', sans-serif" }}>
         <ConvexClientProvider>
           <CartProvider>
             <PageWrapper>{children}</PageWrapper>

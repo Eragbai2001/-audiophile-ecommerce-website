@@ -6,8 +6,26 @@ import { ProductFeatures } from "@/components/product-features";
 import { ProductGallery } from "@/components/product-gallery";
 import { YouMayAlsoLike } from "@/components/you-may-also-like";
 import Link from "next/link";
+import { notFound } from "next/navigation";
+import productsData from "@/data/products.json";
 
-export default function HeadphoneDetailPage() {
+// Get product by ID
+function getProductById(id: string) {
+  return productsData.products.find((product) => product.id === id);
+}
+
+export default async function HeadphoneDetailPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const product = getProductById(id);
+
+  if (!product || product.category !== "headphones") {
+    notFound();
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <div
@@ -27,62 +45,32 @@ export default function HeadphoneDetailPage() {
         </div>
       </div>
       <ProductDetail
-        isNew={true}
-        productName="XX99 MARK II HEADPHONES"
-        productDescription="The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound"
-        imageSrc="/Preview1 (3).png"
-        imageAlt="XX99 Mark II Headphones"
-        price={2999}
+        isNew={product.isNew}
+        productName={product.name}
+        productDescription={product.description}
+        imageSrc={product.imageSrc}
+        imageAlt={product.imageAlt}
+        price={product.price}
         layoutVariant="left"
       />
       <ProductFeatures
-        features={[
-          {
-            text: "Featuring a genuine leather head strap and premium earpieces, these headphones deliver superior comfort for any situation. Whether you're taking a business call or just in your own personal space, the auto mute and pause features ensure that you never miss a beat.",
-          },
-          {
-            text: "The advanced Active Noise Cancellation with built-in equalizer allow you to experience your audio world on your terms. It lets you enjoy your audio in peace, but quickly interact with your surroundings when you need to. Combined with Bluetooth 5. 0 connectivity and 40 hours of battery life, the XX99 Mark II headphones gives you superior sound, cutting-edge technology, and premium design aesthetic.",
-          },
-        ]}
-        inTheBox={[
-          { quantity: 1, item: "Headphone Unit" },
-          { quantity: 2, item: "Replacement Earpiece" },
-          { quantity: 1, item: "User Manual" },
-          { quantity: 1, item: "3.5mm 5m Audio Cable" },
-          { quantity: 1, item: "Travel Bag" },
-        ]}
+        features={product.features}
+        inTheBox={product.inTheBox}
       />{" "}
-      <ProductGallery
-        gallery={[
-          { imageSrc: "/gallery-1.png", imageAlt: "Man using headphones" },
-          { imageSrc: "/gallery-2.png", imageAlt: "Headphones detail view" },
-          { imageSrc: "/gallery-3.png", imageAlt: "Headphones with phone" },
-        ]}
-      />
+      <ProductGallery gallery={product.gallery} />
       <YouMayAlsoLike
-        products={[
-          {
-            id: "1",
-            name: "XX99 MARK I",
-            imageSrc: "/display 3.png",
-            imageAlt: "XX99 Mark I Headphones",
-            productLink: "/headphones/xx99-mark-i",
-          },
-          {
-            id: "2",
-            name: "XX59",
-            imageSrc: "/display 2.png",
-            imageAlt: "XX59 Headphones",
-            productLink: "/headphones/xx59",
-          },
-          {
-            id: "3",
-            name: "ZX9 SPEAKER",
-            imageSrc: "/display 1.png",
-            imageAlt: "ZX9 Speaker",
-            productLink: "/speakers/zx9",
-          },
-        ]}
+        products={product.relatedProducts.map((id) => {
+          const relatedProduct = getProductById(id);
+          return relatedProduct
+            ? {
+                id: relatedProduct.id,
+                name: relatedProduct.name,
+                imageSrc: relatedProduct.imageSrc,
+                imageAlt: relatedProduct.imageAlt,
+                productLink: `/${relatedProduct.category}/${relatedProduct.id}`,
+              }
+            : null;
+        }).filter((p): p is NonNullable<typeof p> => p !== null)}
       />
       <CategoriesShowcase />
       <AboutShowcase />
