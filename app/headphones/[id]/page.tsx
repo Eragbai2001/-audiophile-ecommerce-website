@@ -59,18 +59,20 @@ export default async function HeadphoneDetailPage({
       />{" "}
       <ProductGallery gallery={product.gallery} />
       <YouMayAlsoLike
-        products={product.relatedProducts.map((id) => {
-          const relatedProduct = getProductById(id);
-          return relatedProduct
-            ? {
-                id: relatedProduct.id,
-                name: relatedProduct.name,
-                imageSrc: relatedProduct.imageSrc,
-                imageAlt: relatedProduct.imageAlt,
-                productLink: `/${relatedProduct.category}/${relatedProduct.id}`,
-              }
-            : null;
-        }).filter((p): p is NonNullable<typeof p> => p !== null)}
+        products={product.relatedProducts
+          .map((id) => {
+            const relatedProduct = getProductById(id);
+            return relatedProduct
+              ? {
+                  id: relatedProduct.id,
+                  name: relatedProduct.name,
+                  imageSrc: relatedProduct.imageSrc,
+                  imageAlt: relatedProduct.imageAlt,
+                  productLink: `/${relatedProduct.category}/${relatedProduct.id}`,
+                }
+              : null;
+          })
+          .filter((p): p is NonNullable<typeof p> => p !== null)}
       />
       <CategoriesShowcase />
       <AboutShowcase />
