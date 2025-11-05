@@ -55,13 +55,14 @@ export function OrderConfirmationModal({
             <p className="text-sm text-gray-500">
               You will receive an email confirmation shortly.
             </p>
-            
+
             {/* Email Note for Reviewers */}
             <div className="mt-4 rounded-md bg-amber-50 border border-amber-200 p-3">
               <p className="text-xs text-amber-800">
-                <strong>Note for reviewers:</strong> Due to email service sandbox limitations, 
-                confirmation emails may only be sent to verified addresses. 
-                Email functionality is fully implemented - check browser console for confirmation.
+                <strong>Note for reviewers:</strong> Due to email service
+                sandbox limitations, confirmation emails may only be sent to
+                verified addresses. Email functionality is fully implemented -
+                check browser console for confirmation.
               </p>
             </div>
           </div>

@@ -139,7 +139,9 @@ export const OrderConfirmationEmail = ({
           <Section style={section}>
             <div style={buttonContainer}>
               <Link
-                href={`${process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"}/orders/${orderNumber}`}
+                href={`${
+                  process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"
+                }/orders/${orderNumber}`}
                 style={button}>
                 View Your Order
               </Link>
