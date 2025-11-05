@@ -49,7 +49,7 @@ export const sendOrderConfirmationEmail = action({
       );
 
       const { data, error } = await resend.emails.send({
-        from: "Audiophile <onboarding@resend.dev>",
+        from: process.env.EMAIL_FROM || "Audiophile <onboarding@resend.dev>",
         to: [args.customerEmail],
         subject: `Order Confirmation - ${args.orderNumber}`,
         html: emailHtml,

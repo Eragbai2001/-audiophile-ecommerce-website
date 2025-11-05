@@ -26,7 +26,7 @@ export function YX1Showcase() {
               YX1 EARPHONES
             </h2>
 
-            <Link href="/earphones/yx1-wireless-earphones">
+            <Link href="/earphones">
               <button
                 className="border-2 border-black text-black px-6 py-3 font-manrope font-bold uppercase hover:bg-black hover:text-white transition-all"
                 style={{

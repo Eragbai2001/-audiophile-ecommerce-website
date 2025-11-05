@@ -50,7 +50,7 @@ export function ZX9Showcase() {
               truly remarkable sound.
             </p>
 
-            <Link href="/speakers/zx9-speaker">
+            <Link href="/speakers">
               <button className="bg-black text-white px-8 py-3 font-manrope font-bold text-sm uppercase tracking-wider hover:opacity-80 transition-opacity">
                 See Product
               </button>

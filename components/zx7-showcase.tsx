@@ -22,7 +22,7 @@ export function ZX7Showcase() {
               ZX7 SPEAKER
             </h2>
 
-            <Link href="/speakers/zx7-speaker">
+            <Link href="/speakers">
               <button
                 className="border-2 border-black text-black px-6 py-3 font-manrope font-bold uppercase hover:bg-black hover:text-white transition-all"
                 style={{
