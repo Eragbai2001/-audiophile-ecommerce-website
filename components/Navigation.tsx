@@ -11,7 +11,7 @@ import { CartModal } from "./cart-modal";
 
 const NavLinks = () => {
   const pathname = usePathname();
-  
+
   const isActive = (path: string) => {
     if (path === "/") {
       return pathname === "/";
@@ -31,21 +31,27 @@ const NavLinks = () => {
       <Link
         href="/headphones"
         className={`text-[13px] font-bold tracking-widest uppercase transition-colors ${
-          isActive("/headphones") ? "text-[#D87D4E]" : "text-white hover:text-[#D87D4E]"
+          isActive("/headphones")
+            ? "text-[#D87D4E]"
+            : "text-white hover:text-[#D87D4E]"
         }`}>
         Headphones
       </Link>
       <Link
         href="/speakers"
         className={`text-[13px] font-bold tracking-widest uppercase transition-colors ${
-          isActive("/speakers") ? "text-[#D87D4E]" : "text-white hover:text-[#D87D4E]"
+          isActive("/speakers")
+            ? "text-[#D87D4E]"
+            : "text-white hover:text-[#D87D4E]"
         }`}>
         Speakers
       </Link>
       <Link
         href="/earphones"
         className={`text-[13px] font-bold tracking-widest uppercase transition-colors ${
-          isActive("/earphones") ? "text-[#D87D4E]" : "text-white hover:text-[#D87D4E]"
+          isActive("/earphones")
+            ? "text-[#D87D4E]"
+            : "text-white hover:text-[#D87D4E]"
         }`}>
         Earphones
       </Link>
