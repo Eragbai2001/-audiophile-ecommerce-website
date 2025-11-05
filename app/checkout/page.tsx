@@ -36,8 +36,8 @@ export default function CheckoutPage() {
             <h1 className="mb-8 text-3xl font-bold uppercase tracking-wider text-black">
               Checkout
             </h1>
-            <CheckoutForm 
-              setIsSubmitting={setIsSubmitting} 
+            <CheckoutForm
+              setIsSubmitting={setIsSubmitting}
               onOrderComplete={(orderNumber, orderId) => {
                 setOrderData({ orderNumber, orderId });
                 setShowConfirmation(true);

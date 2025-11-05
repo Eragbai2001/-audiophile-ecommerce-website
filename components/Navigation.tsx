@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ShoppingCart, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -8,32 +9,55 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useCart } from "@/context/CartContext";
 import { CartModal } from "./cart-modal";
 
-const NavLinks = () => (
-  <>
-    <Link
-      href="/"
-      className="text-white text-[13px] font-bold tracking-widest uppercase hover:text-[#D87D4E] transition-colors">
-      Home
-    </Link>
-    <Link
-      href="/headphones"
-      className="text-white text-[13px] font-bold tracking-widest uppercase hover:text-[#D87D4E] transition-colors">
-      Headphones
-    </Link>
-    <Link
-      href="/speakers"
-      className="text-white text-[13px] font-bold tracking-widest uppercase hover:text-[#D87D4E] transition-colors">
-      Speakers
-    </Link>
-    <Link
-      href="/earphones"
-      className="text-white text-[13px] font-bold tracking-widest uppercase hover:text-[#D87D4E] transition-colors">
-      Earphones
-    </Link>
-  </>
-);
+const NavLinks = () => {
+  const pathname = usePathname();
+  
+  const isActive = (path: string) => {
+    if (path === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(path);
+  };
 
-const Navigation = () => {
+  return (
+    <>
+      <Link
+        href="/"
+        className={`text-[13px] font-bold tracking-widest uppercase transition-colors ${
+          isActive("/") ? "text-[#D87D4E]" : "text-white hover:text-[#D87D4E]"
+        }`}>
+        Home
+      </Link>
+      <Link
+        href="/headphones"
+        className={`text-[13px] font-bold tracking-widest uppercase transition-colors ${
+          isActive("/headphones") ? "text-[#D87D4E]" : "text-white hover:text-[#D87D4E]"
+        }`}>
+        Headphones
+      </Link>
+      <Link
+        href="/speakers"
+        className={`text-[13px] font-bold tracking-widest uppercase transition-colors ${
+          isActive("/speakers") ? "text-[#D87D4E]" : "text-white hover:text-[#D87D4E]"
+        }`}>
+        Speakers
+      </Link>
+      <Link
+        href="/earphones"
+        className={`text-[13px] font-bold tracking-widest uppercase transition-colors ${
+          isActive("/earphones") ? "text-[#D87D4E]" : "text-white hover:text-[#D87D4E]"
+        }`}>
+        Earphones
+      </Link>
+    </>
+  );
+};
+
+interface NavigationProps {
+  className?: string;
+}
+
+const Navigation = ({ className = "" }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const { items } = useCart();
@@ -41,9 +65,9 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className="w-full bg-transparent border-b border-white/10 relative z-50">
+      <nav className={`w-full bg-transparent relative z-50 ${className}`}>
         <div className="w-full px-6 md:px-12 lg:px-24">
-          <div className="flex items-center justify-between h-20 md:h-24 gap-4">
+          <div className="flex items-center justify-between h-20 md:h-24 gap-4 border-b border-white/10">
             {/* Mobile Menu Button */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild className="lg:hidden">

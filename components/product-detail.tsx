@@ -45,7 +45,9 @@ export function ProductDetail({
   };
 
   const contentSection = (
-    <div className="flex flex-col gap-6 md:gap-8 justify-start">
+    <div
+      className="flex flex-col gap-6 md:gap-8 justify-start w-full"
+      style={{ maxWidth: "445px" }}>
       {isNew && (
         <p
           className="text-[#D87D4E] tracking-widest uppercase"

@@ -14,18 +14,18 @@ export const createOrder = mutation({
     customerName: v.string(),
     customerEmail: v.string(),
     customerPhone: v.string(),
-    
+
     // Shipping Address
     shippingAddress: v.string(),
     shippingCity: v.string(),
     shippingZipCode: v.string(),
     shippingCountry: v.string(),
-    
+
     // Payment
     paymentMethod: v.string(),
     eMoneyNumber: v.optional(v.string()),
     eMoneyPin: v.optional(v.string()),
-    
+
     // Order Items
     items: v.array(
       v.object({
@@ -36,7 +36,7 @@ export const createOrder = mutation({
         imageSrc: v.string(),
       })
     ),
-    
+
     // Totals
     subtotal: v.number(),
     shipping: v.number(),
@@ -45,14 +45,14 @@ export const createOrder = mutation({
   },
   handler: async (ctx, args) => {
     const orderNumber = generateOrderNumber();
-    
+
     const orderId = await ctx.db.insert("orders", {
       ...args,
       orderNumber,
       status: "pending",
       createdAt: Date.now(),
     });
-    
+
     return {
       orderId,
       orderNumber,

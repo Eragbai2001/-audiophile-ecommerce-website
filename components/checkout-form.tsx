@@ -30,11 +30,14 @@ interface CheckoutFormProps {
   onOrderComplete: (orderNumber: string, orderId: any) => void;
 }
 
-const CheckoutForm = ({ setIsSubmitting, onOrderComplete }: CheckoutFormProps) => {
+const CheckoutForm = ({
+  setIsSubmitting,
+  onOrderComplete,
+}: CheckoutFormProps) => {
   const { items, getSubtotal, clearCart } = useCart();
   const createOrder = useMutation(api.orders.createOrder);
   const sendEmail = useAction(api.emails.sendOrderConfirmationEmail);
-  
+
   const [formData, setFormData] = useState<CheckoutFormData>({
     name: "",
     email: "",
@@ -48,7 +51,9 @@ const CheckoutForm = ({ setIsSubmitting, onOrderComplete }: CheckoutFormProps) =
     eMoneyPin: "",
   });
 
-  const [errors, setErrors] = useState<Partial<Record<keyof CheckoutFormData, string>>>({});
+  const [errors, setErrors] = useState<
+    Partial<Record<keyof CheckoutFormData, string>>
+  >({});
 
   const handleInputChange = (field: keyof CheckoutFormData, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -60,27 +65,27 @@ const CheckoutForm = ({ setIsSubmitting, onOrderComplete }: CheckoutFormProps) =
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Check if cart is empty
     if (items.length === 0) {
       alert("Your cart is empty. Please add items before checkout.");
       return;
     }
-    
+
     try {
       // Validate form
       checkoutSchema.parse(formData);
-      
+
       setIsSubmitting(true);
-      
+
       // Calculate totals
       const subtotal = getSubtotal();
       const shipping = subtotal > 0 ? 50 : 0;
       const vat = Math.ceil(subtotal * 0.2);
       const grandTotal = subtotal + shipping + vat;
-      
+
       console.log("Creating order...");
-      
+
       // Create order in Convex
       const result = await createOrder({
         customerName: formData.name,
@@ -99,9 +104,9 @@ const CheckoutForm = ({ setIsSubmitting, onOrderComplete }: CheckoutFormProps) =
         vat,
         grandTotal,
       });
-      
+
       console.log("Order created:", result);
-      
+
       // Send confirmation email (skip if no API key)
       try {
         await sendEmail({
@@ -122,21 +127,20 @@ const CheckoutForm = ({ setIsSubmitting, onOrderComplete }: CheckoutFormProps) =
       } catch (emailError) {
         console.warn("Email failed (this is okay if no API key):", emailError);
       }
-      
+
       // Clear cart
       clearCart();
-      
+
       console.log("Showing confirmation modal...");
-      
+
       // Reset submitting state before showing modal
       setIsSubmitting(false);
-      
+
       // Show confirmation modal on the same page
       onOrderComplete(result.orderNumber, result.orderId);
-      
     } catch (error) {
       setIsSubmitting(false);
-      
+
       if (error instanceof z.ZodError) {
         const newErrors: Partial<Record<keyof CheckoutFormData, string>> = {};
         error.errors.forEach((err) => {

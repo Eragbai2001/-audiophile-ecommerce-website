@@ -31,7 +31,7 @@ export const sendOrderConfirmationEmail = action({
     try {
       // Initialize Resend inside the action to avoid initialization errors
       const resend = new Resend(process.env.RESEND_API_KEY);
-      
+
       const emailHtml = await render(
         OrderConfirmationEmail({
           customerName: args.customerName,

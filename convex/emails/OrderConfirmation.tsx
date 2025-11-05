@@ -61,11 +61,10 @@ export const OrderConfirmationEmail = ({
           {/* Greeting */}
           <Section style={section}>
             <Heading style={h1}>Thank you for your order!</Heading>
+            <Text style={text}>Hi {customerName},</Text>
             <Text style={text}>
-              Hi {customerName},
-            </Text>
-            <Text style={text}>
-              We're excited to let you know that your order has been confirmed and is being processed.
+              We're excited to let you know that your order has been confirmed
+              and is being processed.
             </Text>
           </Section>
 
@@ -124,8 +123,10 @@ export const OrderConfirmationEmail = ({
           <Section style={section}>
             <Heading style={h2}>Shipping Address</Heading>
             <Text style={text}>
-              {shippingAddress}<br />
-              {shippingCity}, {shippingZipCode}<br />
+              {shippingAddress}
+              <br />
+              {shippingCity}, {shippingZipCode}
+              <br />
               {shippingCountry}
             </Text>
           </Section>
@@ -135,11 +136,10 @@ export const OrderConfirmationEmail = ({
           {/* Footer */}
           <Section style={section}>
             <Text style={text}>
-              If you have any questions about your order, please contact our support team.
+              If you have any questions about your order, please contact our
+              support team.
             </Text>
-            <Text style={footer}>
-              © 2025 Audiophile. All rights reserved.
-            </Text>
+            <Text style={footer}>© 2025 Audiophile. All rights reserved.</Text>
           </Section>
         </Container>
       </Body>
@@ -150,7 +150,8 @@ export const OrderConfirmationEmail = ({
 // Styles
 const main = {
   backgroundColor: "#f6f9fc",
-  fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif',
+  fontFamily:
+    '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif',
 };
 
 const container = {

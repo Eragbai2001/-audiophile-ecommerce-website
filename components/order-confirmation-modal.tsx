@@ -21,10 +21,7 @@ export function OrderConfirmationModal({
 }: OrderConfirmationModalProps) {
   const router = useRouter();
 
-  const order = useQuery(
-    api.orders.getOrder,
-    orderId ? { orderId } : "skip"
-  );
+  const order = useQuery(api.orders.getOrder, orderId ? { orderId } : "skip");
 
   if (!isOpen) return null;
 
@@ -75,12 +72,16 @@ export function OrderConfirmationModal({
                     />
                   </div>
                   <div className="flex-1">
-                    <p className="text-sm font-bold text-black">{firstItem.name}</p>
+                    <p className="text-sm font-bold text-black">
+                      {firstItem.name}
+                    </p>
                     <p className="text-sm font-bold text-gray-500">
                       {formatPrice(firstItem.price)}
                     </p>
                   </div>
-                  <p className="text-sm font-bold text-gray-500">x{firstItem.quantity}</p>
+                  <p className="text-sm font-bold text-gray-500">
+                    x{firstItem.quantity}
+                  </p>
                 </div>
               )}
 
@@ -96,7 +97,9 @@ export function OrderConfirmationModal({
 
             {/* Grand Total (Right Side) */}
             <div className="flex flex-col justify-center bg-black p-6 md:min-w-[200px]">
-              <p className="mb-2 text-sm uppercase text-gray-400">GRAND TOTAL</p>
+              <p className="mb-2 text-sm uppercase text-gray-400">
+                GRAND TOTAL
+              </p>
               <p className="text-lg font-bold text-white">
                 {formatPrice(order?.grandTotal || 0)}
               </p>

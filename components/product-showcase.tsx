@@ -24,7 +24,9 @@ export function ProductShowcase({
   productLink = "/",
 }: ProductShowcaseProps) {
   const contentSection = (
-    <div className="flex flex-col gap-6 md:gap-8 justify-center">
+    <div
+      className="flex flex-col gap-6 md:gap-8 justify-center w-full text-center lg:text-left items-center lg:items-start"
+      style={{ maxWidth: "445px" }}>
       {isNew && (
         <p
           className="text-[#D87D4E] tracking-widest uppercase"
@@ -40,18 +42,18 @@ export function ProductShowcase({
       <h1
         className="text-black font-bold uppercase"
         style={{
-          fontSize: "36px",
+          fontSize: "40px",
           lineHeight: "1.1",
-          letterSpacing: "2px",
+          letterSpacing: "1.43px",
         }}>
         {productName}
       </h1>
 
       <p
-        className="text-black/60"
+        className="text-black/50"
         style={{
           fontSize: "15px",
-          lineHeight: "1.67",
+          lineHeight: "25px",
           letterSpacing: "0px",
         }}>
         {productDescription}
@@ -129,16 +131,16 @@ export function ProductShowcase({
               <div className="w-full lg:w-1/2 flex items-center justify-center py-8 lg:py-0">
                 {imageSection}
               </div>
-              <div className="w-full lg:w-1/2 py-8 lg:py-0 lg:pl-12">
+              <div className="w-full lg:w-1/2 py-8 lg:py-0 flex items-center justify-center lg:justify-start">
                 {contentSection}
               </div>
             </>
           ) : (
             <>
-              <div className="w-full lg:w-1/2 py-8 lg:py-0 lg:pr-12">
+              <div className="w-full lg:w-1/2 py-8 lg:py-0 flex items-center justify-center lg:justify-end order-2 lg:order-1">
                 {contentSection}
               </div>
-              <div className="w-full lg:w-1/2 flex items-center justify-center py-8 lg:py-0">
+              <div className="w-full lg:w-1/2 flex items-center justify-center py-8 lg:py-0 order-1 lg:order-2">
                 {imageSection}
               </div>
             </>

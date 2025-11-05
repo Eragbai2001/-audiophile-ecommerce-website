@@ -26,11 +26,11 @@ export function CategoriesShowcase() {
   ];
 
   return (
-    <section className="w-full bg-white py-12 md:py-16 lg:py-40 px-6 md:px-8">
+    <section className="w-full bg-white py-24 md:py-28 lg:py-40 px-6 md:px-8">
       {/* Container with max-width constraint */}
       <div className="mx-auto" style={{ maxWidth: "1510px" }}>
         {/* 3-column grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-6">
+        <div className="grid grid-cols-1  lg:grid-cols-3 gap-16 md:gap-20 ">
           {categories.map((category) => (
             <div
               key={category.id}
@@ -103,7 +103,7 @@ export function CategoriesShowcase() {
                   href={`/${category.name.toLowerCase()}`}
                   className="flex items-center gap-3 cursor-pointer group/link">
                   <span
-                    className="transition-all duration-300"
+                    className="transition-all duration-300 text-black/50 group-hover/link:text-[#D87D4A]"
                     style={{
                       fontFamily: "Manrope, sans-serif",
                       fontWeight: 700,
@@ -111,7 +111,6 @@ export function CategoriesShowcase() {
                       lineHeight: "100%",
                       letterSpacing: "1px",
                       textTransform: "uppercase",
-                      color: "#D87D4A",
                       backgroundColor: "transparent",
                     }}>
                     SHOP
@@ -122,8 +121,7 @@ export function CategoriesShowcase() {
                     height="12"
                     viewBox="0 0 8 12"
                     fill="none"
-                    className="transition-all duration-300 group-hover/link:translate-x-1"
-                    style={{ color: "#D87D4A" }}>
+                    className="transition-all duration-300 text-black/50 group-hover/link:text-[#D87D4A] group-hover/link:translate-x-1">
                     <path
                       d="M1 1L6 6L1 11"
                       stroke="currentColor"

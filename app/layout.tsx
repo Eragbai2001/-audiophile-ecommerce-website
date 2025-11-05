@@ -1,18 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
 import { CartProvider } from "@/context/CartContext";
 import { ConvexClientProvider } from "@/components/ConvexClientProvider";
+import { PageWrapper } from "@/components/page-wrapper";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -28,11 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        className={`${manrope.variable} antialiased font-manrope`}
+        style={{ fontFamily: "var(--font-manrope)" }}>
         <ConvexClientProvider>
           <CartProvider>
-            <Navigation />
-            {children}
+            <PageWrapper>{children}</PageWrapper>
           </CartProvider>
         </ConvexClientProvider>
       </body>
