@@ -9,6 +9,8 @@ import {
   Section,
   Text,
   Hr,
+  Button,
+  Link,
 } from "@react-email/components";
 import * as React from "react";
 
@@ -133,11 +135,24 @@ export const OrderConfirmationEmail = ({
 
           <Hr style={hr} />
 
+          {/* CTA Button */}
+          <Section style={section}>
+            <div style={buttonContainer}>
+              <Link
+                href={`${process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"}/orders/${orderNumber}`}
+                style={button}>
+                View Your Order
+              </Link>
+            </div>
+          </Section>
+
+          <Hr style={hr} />
+
           {/* Footer */}
           <Section style={section}>
             <Text style={text}>
               If you have any questions about your order, please contact our
-              support team.
+              support team at support@audiophile.com
             </Text>
             <Text style={footer}>© 2025 Audiophile. All rights reserved.</Text>
           </Section>
@@ -285,6 +300,24 @@ const footer = {
   lineHeight: "16px",
   marginTop: "24px",
   textAlign: "center" as const,
+};
+
+const buttonContainer = {
+  textAlign: "center" as const,
+  margin: "32px 0",
+};
+
+const button = {
+  backgroundColor: "#D87D4E",
+  borderRadius: "4px",
+  color: "#ffffff",
+  fontSize: "16px",
+  fontWeight: "bold",
+  textDecoration: "none",
+  textAlign: "center" as const,
+  display: "inline-block",
+  padding: "16px 48px",
+  cursor: "pointer",
 };
 
 export default OrderConfirmationEmail;

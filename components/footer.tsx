@@ -56,7 +56,15 @@ export function Footer() {
                 <a
                   href="#"
                   aria-label="Facebook"
-                  className="transition-all hover:brightness-150">
+                  className="transition-all hover:opacity-80"
+                  style={{ filter: "brightness(0) invert(1)" }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.filter =
+                      "brightness(0) saturate(100%) invert(56%) sepia(70%) saturate(466%) hue-rotate(336deg) brightness(95%) contrast(89%)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.filter = "brightness(0) invert(1)")
+                  }>
                   <img
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Path%20%281%29-d3Y9Nw3Cs3J2PtrP8zYFJ8f0o5Anos.png"
                     alt="Facebook"
@@ -66,7 +74,15 @@ export function Footer() {
                 <a
                   href="#"
                   aria-label="Twitter"
-                  className="transition-all hover:brightness-150">
+                  className="transition-all hover:opacity-80"
+                  style={{ filter: "brightness(0) invert(1)" }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.filter =
+                      "brightness(0) saturate(100%) invert(56%) sepia(70%) saturate(466%) hue-rotate(336deg) brightness(95%) contrast(89%)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.filter = "brightness(0) invert(1)")
+                  }>
                   <img
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Shape-G0hPbMxgMKOgZzaC7Ift1GGvfzcRVI.png"
                     alt="Twitter"
@@ -76,7 +92,15 @@ export function Footer() {
                 <a
                   href="#"
                   aria-label="Instagram"
-                  className="transition-all hover:brightness-150">
+                  className="transition-all hover:opacity-80"
+                  style={{ filter: "brightness(0) invert(1)" }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.filter =
+                      "brightness(0) saturate(100%) invert(56%) sepia(70%) saturate(466%) hue-rotate(336deg) brightness(95%) contrast(89%)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.filter = "brightness(0) invert(1)")
+                  }>
                   <img
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Path-Fp01rchY917qge8oriv9WLMSR6NvGg.png"
                     alt="Instagram"
@@ -94,8 +118,6 @@ export function Footer() {
 
         {/* Tablet layout - same as desktop */}
         <div className="hidden md:flex md:flex-col md:gap-12 lg:hidden">
-
-          
           {/* Top row: Logo + Navigation */}
           <div className="flex items-center justify-between">
             <div className="flex  flex-col items-start gap-12">
@@ -147,7 +169,15 @@ export function Footer() {
               <a
                 href="#"
                 aria-label="Facebook"
-                className="transition-all hover:brightness-150">
+                className="transition-all hover:opacity-80"
+                style={{ filter: "brightness(0) invert(1)" }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.filter =
+                    "brightness(0) saturate(100%) invert(56%) sepia(70%) saturate(466%) hue-rotate(336deg) brightness(95%) contrast(89%)")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.filter = "brightness(0) invert(1)")
+                }>
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Path%20%281%29-d3Y9Nw3Cs3J2PtrP8zYFJ8f0o5Anos.png"
                   alt="Facebook"
@@ -157,7 +187,15 @@ export function Footer() {
               <a
                 href="#"
                 aria-label="Twitter"
-                className="transition-all hover:brightness-150">
+                className="transition-all hover:opacity-80"
+                style={{ filter: "brightness(0) invert(1)" }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.filter =
+                    "brightness(0) saturate(100%) invert(56%) sepia(70%) saturate(466%) hue-rotate(336deg) brightness(95%) contrast(89%)")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.filter = "brightness(0) invert(1)")
+                }>
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Shape-G0hPbMxgMKOgZzaC7Ift1GGvfzcRVI.png"
                   alt="Twitter"
@@ -167,7 +205,15 @@ export function Footer() {
               <a
                 href="#"
                 aria-label="Instagram"
-                className="transition-all hover:brightness-150">
+                className="transition-all hover:opacity-80"
+                style={{ filter: "brightness(0) invert(1)" }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.filter =
+                    "brightness(0) saturate(100%) invert(56%) sepia(70%) saturate(466%) hue-rotate(336deg) brightness(95%) contrast(89%)")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.filter = "brightness(0) invert(1)")
+                }>
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Path-Fp01rchY917qge8oriv9WLMSR6NvGg.png"
                   alt="Instagram"
@@ -180,7 +226,6 @@ export function Footer() {
 
         {/* Mobile layout */}
         <div className="flex flex-col items-center gap-8 md:hidden">
-
           {/* Logo */}
           <h2
             className="font-manrope text-2xl font-bold text-white text-center"
@@ -228,7 +273,15 @@ export function Footer() {
             <a
               href="#"
               aria-label="Facebook"
-              className="transition-all hover:brightness-150">
+              className="transition-all hover:opacity-80"
+              style={{ filter: "brightness(0) invert(1)" }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.filter =
+                  "brightness(0) saturate(100%) invert(56%) sepia(70%) saturate(466%) hue-rotate(336deg) brightness(95%) contrast(89%)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.filter = "brightness(0) invert(1)")
+              }>
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Path%20%281%29-d3Y9Nw3Cs3J2PtrP8zYFJ8f0o5Anos.png"
                 alt="Facebook"
@@ -238,7 +291,15 @@ export function Footer() {
             <a
               href="#"
               aria-label="Twitter"
-              className="transition-all hover:brightness-150">
+              className="transition-all hover:opacity-80"
+              style={{ filter: "brightness(0) invert(1)" }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.filter =
+                  "brightness(0) saturate(100%) invert(56%) sepia(70%) saturate(466%) hue-rotate(336deg) brightness(95%) contrast(89%)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.filter = "brightness(0) invert(1)")
+              }>
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Shape-G0hPbMxgMKOgZzaC7Ift1GGvfzcRVI.png"
                 alt="Twitter"
@@ -248,7 +309,15 @@ export function Footer() {
             <a
               href="#"
               aria-label="Instagram"
-              className="transition-all hover:brightness-150">
+              className="transition-all hover:opacity-80"
+              style={{ filter: "brightness(0) invert(1)" }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.filter =
+                  "brightness(0) saturate(100%) invert(56%) sepia(70%) saturate(466%) hue-rotate(336deg) brightness(95%) contrast(89%)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.filter = "brightness(0) invert(1)")
+              }>
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Path-Fp01rchY917qge8oriv9WLMSR6NvGg.png"
                 alt="Instagram"
@@ -257,7 +326,6 @@ export function Footer() {
             </a>
           </div>
         </div>
-
       </div>
     </footer>
   );
